@@ -8,6 +8,5 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ifeelBALANCED/atomic-effector-template.git
-   cd atomic-effector-template
+   git clone https://github.com/ifeelBALANCED/tanstack-template.git
     ```
