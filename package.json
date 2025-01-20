@@ -1,0 +1,80 @@
+{
+  "name": "tanstack-template",
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifeelBALANCED/tanstack-template"
+  },
+  "bugs": {
+    "url": "https://github.com/ifeelBALANCED/tanstack-template/issues",
+    "email": "vladislavherasymenko@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm watch-routes & vite --open",
+    "build": "pnpm generate-routes && tsc && vite build",
+    "preview": "vite preview",
+    "https-preview": "serve dist",
+    "prepare": "husky && npx -y only-allow pnpm",
+    "ts:check": "tsc --noEmit",
+    "fmt": "biome format --write .",
+    "lint": "biome lint --error-on-warnings --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write --unsafe .",
+    "biome:check": "pnpm fmt && pnpm lint && pnpm check",
+    "dep-cruiser:preview": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > dependency-graph-preview.svg",
+    "generate-routes": "tsr generate",
+    "watch-routes": "tsr watch"
+  },
+  "dependencies": {
+    "@biomejs/cli-darwin-x64": "1.9.4",
+    "@biomejs/cli-win32-x64": "^1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@tanstack/react-query": "^5.64.2",
+    "@tanstack/react-query-devtools": "^5.64.2",
+    "@tanstack/react-router": "^1.97.3",
+    "@tanstack/router-devtools": "^1.97.3",
+    "@tanstack/router-plugin": "^1.97.3",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "vite-plugin-checker": "^0.8.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "7.25.9",
+    "@babel/preset-react": "7.26.3",
+    "@babel/preset-typescript": "7.26.0",
+    "@biomejs/biome": "1.9.4",
+    "@neodx/svg": "^0.7.1",
+    "@tanstack/router-cli": "^1.97.3",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "10.4.20",
+    "cssnano": "^7.0.6",
+    "dependency-cruiser": "^16.8.0",
+    "husky": "^9.1.7",
+    "postcss": "^8.4.49",
+    "postcss-nesting": "^13.0.1",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^0.21.1",
+    "vitest": "^2.1.8"
+  },
+  "author": {
+    "name": "ifeelBALANCED",
+    "email": "vladislavherasymenko@gmail.com"
+  }
+}
